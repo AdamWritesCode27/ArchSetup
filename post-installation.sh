@@ -32,6 +32,6 @@ $INSTALL_PACKAGES brave-bin alacritty vscodium-bin spotify discord, curl i3-wm
 
 #Configure Installed Packages
 CopyFileToDirectory $CONFIGS_SOURCE/alacritty.toml $CONFIG_DIR/alacritty/
-CopyFileToDirectory $CONFIGS_SOURCE/VsCodium/keybindings.json $CONFIG_DIR/VSCodium/User/
+CopyFileToDirectory $CONFIGS_SOURCE/VSCodium/keybindings.json $CONFIG_DIR/VSCodium/User/
 
 #Clean up the directory after running if the --cleanup flag is set to true
