@@ -15,7 +15,6 @@ CopyFileToDirectory()
 
 #Update the make package configuration to allow up to 6 threads to be used to when building packages.
 CopyFileToDirectory $CONFIGS_SOURCE/makepkg.conf /etc/
-CopyFileToDirectory $CONFIGS_SOURCE/alacritty.toml $CONFIG_DIR/alacritty/
 
 #install AUR package manager (paru)
 pacman -S --noconfirm git base-devel
@@ -28,3 +27,7 @@ rm -rf paru
 
 #install
 $INSTALL_PACKAGES brave-bin alacritty vscodium-bin spotify discord, curl i3-wm
+
+#Configure Installed Packages
+CopyFileToDirectory $CONFIGS_SOURCE/alacritty.toml $CONFIG_DIR/alacritty/
+CopyFileToDirectory $CONFIGS_SOURCE/VsCodium/keybindings.json $CONFIG_DIR/VSCodium/User/
