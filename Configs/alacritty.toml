@@ -3,3 +3,8 @@
 
 [window]
 opacity = 0.75
+
+[cursor]
+style.shape = "Beam"
+style.blinking = "On"
+unfocused_hollow = false
