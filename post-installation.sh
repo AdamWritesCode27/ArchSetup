@@ -1,9 +1,11 @@
 #!/bin/bash
 
+#Flags
+
 #Variables
 CONFIGS_SOURCE=Configs
 CONFIG_DIR=$XDG_CONFIG_HOME
-INSTALL_PACKAGES="paru -S --noconfirm"
+INSTALL_PACKAGES="paru -S --quiet --noconfirm"
 
 #Functions
 CopyFileToDirectory()
@@ -17,7 +19,7 @@ CopyFileToDirectory()
 CopyFileToDirectory $CONFIGS_SOURCE/makepkg.conf /etc/
 
 #install AUR package manager (paru)
-pacman -S --noconfirm git base-devel
+pacman -S --quiet --noconfirm git base-devel
 git clone https://aur.archlinux.org/paru.git
 cd paru
 makepkg -si
@@ -31,3 +33,5 @@ $INSTALL_PACKAGES brave-bin alacritty vscodium-bin spotify discord, curl i3-wm
 #Configure Installed Packages
 CopyFileToDirectory $CONFIGS_SOURCE/alacritty.toml $CONFIG_DIR/alacritty/
 CopyFileToDirectory $CONFIGS_SOURCE/VsCodium/keybindings.json $CONFIG_DIR/VSCodium/User/
+
+#Clean up the directory after running if the --cleanup flag is set to true
