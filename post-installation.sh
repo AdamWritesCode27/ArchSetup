@@ -18,6 +18,9 @@ CopyFileToDirectory()
 #Update the make package configuration to allow up to 6 threads to be used to when building packages.
 CopyFileToDirectory $CONFIGS_SOURCE/makepkg.conf /etc/
 
+pacman -S --quiet --noconfirm neofetch
+neofetch
+
 #install AUR package manager (paru)
 pacman -S --quiet --noconfirm git base-devel
 git clone https://aur.archlinux.org/paru.git
@@ -28,10 +31,11 @@ cd ../
 rm -rf paru
 
 #install
-$INSTALL_PACKAGES brave-bin alacritty vscodium-bin spotify discord, curl i3-wm
+$INSTALL_PACKAGES brave-bin alacritty vscodium-bin spotify discord, curl i3-wm micro
 
 #Configure Installed Packages
 CopyFileToDirectory $CONFIGS_SOURCE/alacritty.toml $CONFIG_DIR/alacritty/
+CopyFileToDirectory $CONFIGS_SOURCE/micro/settings.json $CONFIG_DIR/micro/
 CopyFileToDirectory $CONFIGS_SOURCE/VSCodium/keybindings.json $CONFIG_DIR/VSCodium/User/
 
 #Clean up the directory after running if the --cleanup flag is set to true
