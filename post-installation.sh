@@ -31,8 +31,8 @@ cd ../
 #Make sure we remove the package directory after we've finished building the package
 rm -rf paru
 
-#install
-$INSTALL_PACKAGES brave-bin alacritty vscodium-bin spotify discord, curl i3-wm micro libreoffice-still pcloud-drive gnome-keyring
+#install packages
+$INSTALL_PACKAGES brave-bin alacritty vscodium-bin spotify discord, curl i3-wm micro libreoffice-still pcloud-drive gnome-keyring proton-mail
 
 #Configure Installed Packages
 CopyFileToDirectory $WALLPAPERS/Spiderman.jpg $HOME/Wallpapers
