@@ -4,6 +4,7 @@
 
 #Variables
 CONFIGS_SOURCE=Configs
+WALLPAPERS=Wallpapers
 CONFIG_DIR=$XDG_CONFIG_HOME
 INSTALL_PACKAGES="paru -S --quiet --noconfirm"
 
@@ -31,9 +32,10 @@ cd ../
 rm -rf paru
 
 #install
-$INSTALL_PACKAGES brave-bin alacritty vscodium-bin spotify discord, curl i3-wm micro
+$INSTALL_PACKAGES brave-bin alacritty vscodium-bin spotify discord, curl i3-wm micro libreoffice-still pcloud-drive
 
 #Configure Installed Packages
+CopyFileToDirectory $WALLPAPERS/Spiderman.jpg $HOME/Wallpapers
 CopyFileToDirectory $CONFIGS_SOURCE/alacritty.toml $CONFIG_DIR/alacritty/
 CopyFileToDirectory $CONFIGS_SOURCE/micro/settings.json $CONFIG_DIR/micro/
 CopyFileToDirectory $CONFIGS_SOURCE/VSCodium/keybindings.json $CONFIG_DIR/VSCodium/User/
