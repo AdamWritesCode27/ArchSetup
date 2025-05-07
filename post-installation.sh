@@ -32,7 +32,7 @@ cd ../
 rm -rf paru
 
 #install
-$INSTALL_PACKAGES brave-bin alacritty vscodium-bin spotify discord, curl i3-wm micro libreoffice-still pcloud-drive
+$INSTALL_PACKAGES brave-bin alacritty vscodium-bin spotify discord, curl i3-wm micro libreoffice-still pcloud-drive gnome-keyring
 
 #Configure Installed Packages
 CopyFileToDirectory $WALLPAPERS/Spiderman.jpg $HOME/Wallpapers
