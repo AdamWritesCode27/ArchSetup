@@ -32,12 +32,17 @@ cd ../
 rm -rf paru
 
 #install packages
-$INSTALL_PACKAGES brave-bin alacritty vscodium-bin spotify discord, curl i3-wm micro libreoffice-still pcloud-drive gnome-keyring proton-mail proton-vpn-gtk-app network-manager-applet
+$INSTALL_PACKAGES brave-bin vscodium-bin spotify discord, pcloud-drive proton-mail
 
 #Configure Installed Packages
 CopyFileToDirectory $WALLPAPERS/Spiderman.jpg $HOME/Wallpapers
 CopyFileToDirectory $CONFIGS_SOURCE/alacritty.toml $CONFIG_DIR/alacritty/
 CopyFileToDirectory $CONFIGS_SOURCE/micro/settings.json $CONFIG_DIR/micro/
 CopyFileToDirectory $CONFIGS_SOURCE/VSCodium/keybindings.json $CONFIG_DIR/VSCodium/User/
+
+#Set the Wallpaper
+mkdir $HOME/Wallpapers
+CopyFileToDirectory $WALLPAPERS/Spiderman.jpg ~/Wallpapers/
+xfconf-query -c xfce4-desktop -p $(xfconf-query -c xfce4-desktop -l | grep "workspace0/last-image") -s ~/Wallpaper/Spiderman.jpg
 
 #Clean up the directory after running if the --cleanup flag is set to true
