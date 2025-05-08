@@ -262,7 +262,8 @@
         "git",
         "proton-vpn-gtk-app",
         "network-manager-applet",
-        "neofetch"
+        "neofetch",
+        "shutter"
     ],
     "parallel_downloads": 0,
     "profile_config": {
