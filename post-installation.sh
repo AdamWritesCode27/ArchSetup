@@ -31,6 +31,9 @@ cd ../
 #Make sure we remove the package directory after we've finished building the package
 rm -rf paru
 
+#Configure XFCE
+
+
 #install packages
 $INSTALL_PACKAGES brave-bin vscodium-bin spotify discord, pcloud-drive proton-mail
 
